@@ -1,0 +1,31 @@
+<div *ngIf="posts;else loading">
+  <div class="search-author">
+    <input type="text" placeholder="Найти автора..." [(ngModel)]="searchStr">
+  </div>
+  <div *ngIf="posts.length === 0"  class="text-center"><h2>Постов на данный момент нет</h2></div>
+  <div class="flex-page" *ngFor="let post of posts | searchPosts: searchStr">
+    <div class="asg-container asg-row">
+      <img src="http://nashzeleniymir.ru/wp-content/uploads/2015/12/%D0%A1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0-%D0%BB%D0%B0%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D1%80-%D1%84%D0%BE%D1%82%D0%BE.jpg">
+      <div class="asg-column">
+        <div><h1>Автор: {{post.author}}</h1><hr/></div>
+        <div><h2>Краткое описание: {{post.description}}</h2><hr/></div>
+        <div><h2>Адрес: {{post.address}}</h2><hr/></div>
+        <div *ngIf="post.sex === true"><h2>Пол: Мальчик</h2><hr/></div>
+        <div *ngIf="post.sex === false"><h2>Пол: Девочка</h2><hr/></div>
+        <div><h2>Категория: {{post.category}}</h2><hr/></div>
+        <div><h3>{{post.created_at | date: 'short': null: 'ru'}}</h3></div>
+      </div>
+      <ul>
+        <li><a (click)="removeUser(post.author)">Заблокировать</a></li>
+        <hr/>
+        <li><a (click)="approved(post.id)">Опубликовать</a></li>
+        <hr/>
+        <li><a (click)="removePost(post.id)">Удалить</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">Идет загрузка...</p>
+</ng-template>

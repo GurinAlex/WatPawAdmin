@@ -1,0 +1,27 @@
+<app-alert></app-alert>
+<body>
+<nav class="navbar bg-primary">
+  <h1>
+    <!--    <img class="admin-img" src="https://sun9-37.userapi.com/c200816/v200816584/23097/2FC3upB9TT4.jpg" alt="Загружаю">-->
+    <a routerLink="/">Страница администратора</a>
+  </h1>
+
+  <ul *ngIf="auth.isAuthenticated()">
+    <li routerLinkActive="active">
+      <a [routerLink]="['/']">Главная</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/users']">Пользователи</a>
+    </li>
+    <li>
+      <a href="#" (click)="logout($event)">Выйти</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+</body>
+
+<!--<footer class="admin-footer">adadad</footer>-->

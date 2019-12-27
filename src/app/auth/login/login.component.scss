@@ -1,0 +1,100 @@
+//.link-router {
+//  display: inline-block;
+//  background: var(--light-color);
+//  color: #333;
+//  padding: 0.4rem 1.3rem;
+//  font-size: 1rem;
+//  border: none;
+//  cursor: pointer;
+//  margin-right: 0.5rem;
+//  transition: opacity 0.2s ease-in;
+//  outline: none;
+//}
+
+.text-c {
+  text-align: center;
+  color: #E92121;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  font-size: 2.5rem;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 5px 270px 20px 0;
+  font-size: 15px;
+  color: black;
+  border-radius: 5px;
+  background-color: #AAA9A9;
+  border: none;
+  cursor: pointer;
+}
+a:hover {
+  transition: all 0.5s;
+  background-color: #858484;
+}
+input:hover {
+  box-shadow: 0 0 4px 2px #b7b6b6;
+}
+.container {
+  width: 550px;
+  background-color: #fbfbfb;
+  margin: 6rem auto 0 auto;
+  text-align: center;
+  border-radius: 7px;
+}
+input[type="text"], input[type="password"] {
+  width: 480px;
+  height: 50px;
+  font-size: 18px;
+  margin-left: 2.3rem;
+  margin-top: 25px;
+  border-radius: 5px;
+  padding-left: 10px;
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+}
+.dws-submit {
+  padding: 10px 50px;
+  margin: 5px 70px 20px 5rem;
+  font-size: 15px;
+  color: black;
+  //background-color: #AAA9A9;
+  background-color: #ffac7f;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.dws-submit:hover {
+  transition: all 0.5s;
+  background: #ff5f46;
+}
+.row {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.validation {
+  color: var(--primary-color);
+}
+
+.message-login {
+  background-color: #fdfdfd;
+}
+
+.container img {
+  width: 180px;
+  height: 180px;
+  margin: -90px 0 10px 0;
+  border-top: 4px solid #ff2f23;
+  border-radius: 50%;
+}
+.error-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #E92121;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="users.length; else loading">
+  <table>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Автор</th>
+      <th>E-mail</th>
+      <th>Действие</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; let idx = index">
+      <td *ngIf="user.username !== 'rabbit'">{{ idx + 1 }}</td>
+      <td *ngIf="user.username !== 'rabbit'">{{ user.username }}</td>
+      <td *ngIf="user.username !== 'rabbit'">{{ user.email }}</td>
+      <td *ngIf="user.username !== 'rabbit'">
+        <a (click)="remove(user.username)">Удалить</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">Идет загрузка...</p>
+</ng-template>
