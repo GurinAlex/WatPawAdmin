@@ -20,7 +20,7 @@ export class AnminLayoutComponent implements OnInit, OnDestroy {
   logout(event: Event) {
     event.preventDefault();
     this.auth.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
   ngOnDestroy(): void {

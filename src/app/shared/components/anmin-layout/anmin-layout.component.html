@@ -8,10 +8,13 @@
 
   <ul *ngIf="auth.isAuthenticated()">
     <li routerLinkActive="active">
-      <a [routerLink]="['/']">Главная</a>
+      <a [routerLink]="['/dashboard']">Главная</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['/users']">Пользователи</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/posts']">Все посты</a>
     </li>
     <li>
       <a href="#" (click)="logout($event)">Выйти</a>

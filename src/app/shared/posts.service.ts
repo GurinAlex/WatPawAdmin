@@ -17,6 +17,10 @@ export class PostsService {
     return this.http.get(`${environment.apiKey}/admin/articles`)
         .pipe(map( (response: Post[]) => response ));
   }
+  getAllAccepted(): Observable<Post[]> {
+    return this.http.get(`${environment.apiKey}/admin/allarticles`)
+      .pipe(map( (response: Post[]) => response ));
+  }
 
   approve(id: number) {
     return this.http.get(`${environment.apiKey}/admin/articles/approve/${id}`);

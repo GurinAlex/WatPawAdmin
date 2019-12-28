@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.auth.logout();
     this.route.queryParams.subscribe((params: Params) => {
       // if (params['loginAgain']) {
       //   this.message = 'Пожалуйста, введите данные'
@@ -66,7 +67,7 @@ export class LoginComponent implements OnInit {
       }
       this.auth.login(user).subscribe((response) => {
         this.form.reset();
-        this.router.navigate(['/']);
+        this.router.navigate(['/dashboard']);
         this.submitted = false;
       }, () => {
         this.submitted = false;

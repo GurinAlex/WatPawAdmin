@@ -17,6 +17,7 @@ import {AuthInterceptor} from './shared/auth.interceptor';
 import {SearchPipe} from './shared/search.pipe';
 import { UsersComponent } from './users/users.component';
 import {AlertService} from './shared/services/alert.service';
+import { AcceptedPostsComponent } from './accepted-posts/accepted-posts.component';
 
 
 registerLocaleData(ruLocale, 'ru');
@@ -35,7 +36,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     LoginComponent,
     DashboardComponent,
     AlertComponent,
-    UsersComponent
+    UsersComponent,
+    AcceptedPostsComponent
   ],
   imports: [
     SharedModule,
