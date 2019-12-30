@@ -49,7 +49,12 @@ export class LoginComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-
+    if (this.message === 'Извините, вы не кролик') {
+      this.message = '';
+    }
+    if (this.message === 'Неверный логин или пароль') {
+      this.message = '';
+    }
     this.submitted = true;
 
     const user: User = {
