@@ -6,7 +6,8 @@
   <div class="container-dashboard" *ngFor="let post of posts | searchPosts: searchStr">
     <div class="content-card">
       <div class="rectangle card-row">
-        <img src="http://nashzeleniymir.ru/wp-content/uploads/2015/12/%D0%A1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0-%D0%BB%D0%B0%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D1%80-%D1%84%D0%BE%D1%82%D0%BE.jpg">
+        <img *ngIf="post.image" src="{{post.image}}">
+        <img *ngIf="!post.image" src="http://nashzeleniymir.ru/wp-content/uploads/2015/12/%D0%A1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0-%D0%BB%D0%B0%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D1%80-%D1%84%D0%BE%D1%82%D0%BE.jpg">
         <div class="card-column">
           <div><h2>Автор: {{post.author}}</h2></div>
           <div><h2>Краткое описание: {{post.description}}</h2></div>
