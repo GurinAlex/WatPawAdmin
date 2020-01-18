@@ -65,8 +65,8 @@
 .rectangle img {
   border-radius: 6px 0 0 6px;
   display: flex;
-  width: 30%;
-  height: 15rem;
+  width: 31%;
+  max-height: 20rem;
   border-right: 1px solid gray;
   flex-direction: row;
 }
@@ -84,6 +84,7 @@
   font-size: 1rem;
   font-weight: 200;
   margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 .rectangle:hover {
   box-shadow: 0 0 2px 2px #b0b0b0;

@@ -15,7 +15,7 @@
           <div *ngIf="post.sex === true"><h2>Пол: Мальчик</h2></div>
           <div *ngIf="post.sex === false"><h2>Пол: Девочка</h2></div>
           <div><h2>Контакты: {{post.contacts}}</h2></div>
-          <div><h3>Создано: {{post.created_at | date: 'short': null: 'ru'}}</h3></div>
+          <div><h3>Создано: {{post.created_at | date: 'medium': '+1000': 'ru'}}</h3></div>
         </div>
       </div>
       <div class="box">

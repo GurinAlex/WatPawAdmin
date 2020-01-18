@@ -18,6 +18,7 @@ import {SearchPipe} from './shared/search.pipe';
 import { UsersComponent } from './users/users.component';
 import {AlertService} from './shared/services/alert.service';
 import { AcceptedPostsComponent } from './accepted-posts/accepted-posts.component';
+import {SearchUsersPipe} from './shared/services/search-users.pipe';
 
 
 registerLocaleData(ruLocale, 'ru');
@@ -37,7 +38,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     DashboardComponent,
     AlertComponent,
     UsersComponent,
-    AcceptedPostsComponent
+    AcceptedPostsComponent,
+    SearchUsersPipe
   ],
   imports: [
     SharedModule,

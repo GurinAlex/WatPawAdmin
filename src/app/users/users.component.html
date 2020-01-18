@@ -1,4 +1,9 @@
 <div *ngIf="users.length; else loading">
+  <div class="row-users">
+  <div class="search-author">
+    <input type="text" placeholder="Найти пользователя..." [(ngModel)]="searchStr">
+  </div>
+  </div>
   <table class="table-center">
     <thead>
     <tr>
@@ -9,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users; let idx = index">
+    <tr *ngFor="let user of users | userSearch: searchStr; let idx = index ">
       <td *ngIf="user.username !== 'rabbit'">{{ idx + 1 }}</td>
       <td *ngIf="user.username !== 'rabbit'">{{ user.username }}</td>
       <td *ngIf="user.username !== 'rabbit'">{{ user.email }}</td>

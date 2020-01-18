@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
   users: User[] = [];
   pSub: Subscription;
   dSub: Subscription;
+  searchStr = '';
   constructor(
     private postService: PostsService,
     private alert: AlertService,
